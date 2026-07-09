@@ -26,18 +26,7 @@
       .container {
         background: #eef3f8;
       }
-<div class="counter">
-    👥 Відвідувачів:
-    <span id="count">...</span>
-</div>
-      
-      <script>
-      fetch("https://api.countapi.xyz/hit/yurii-rybalko-personal-site/visits")
-      .then(response => response.json())
-      .then(data => {
-          document.getElementById("count").textContent = data.value;
-      });
-      </script>
+
       /* Верхня навігаційна панель */
       .nav {
         position: fixed;
@@ -166,6 +155,19 @@
         <h1>Привіт! Я Юра</h1>
         <p>А це моя сторінка. Тут Ви зможете дізнатися більше про мене.</p>
         <a href="#about" class="button">Дізнатися більше</a>
+      </div>
+        <div class="counter">
+          👥 Відвідувачів:
+          <span id="count">...</span>
+        </div>
+
+        <script>
+          fetch("https://api.countapi.xyz/hit/yurii-rybalko-personal-site/visits")
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("count").textContent = data.value;
+            });
+        </script>
       </div>
     </header>
 
