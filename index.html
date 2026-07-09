@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя сторінка</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      }
+
+      /* Основний фон контенту нижньої частини */
+      .container {
+        background: #eef3f8;
+      }
+
+      /* Верхня навігаційна панель */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: rgba(2, 28, 40, 0.8);
+        backdrop-filter: blur(8px);
+      }
+
+      .nav-logo {
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.2rem;
+      }
+
+      .nav-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .nav-link:hover {
+        opacity: 0.8;
+      }
+
+      /* Герой-блок з градієнтом і м'якою декоративною геометрією */
+      .hero,
+      .subpage-header {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(120deg, #022328, #021D2F);
+        color: #fff;
+        padding: 2rem 1rem 3rem;
+        text-align: center;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        pointer-events: none;
+      }
+
+      .hero::before {
+        width: 220px;
+        height: 220px;
+        left: -60px;
+        top: -40px;
+      }
+
+      .hero::after {
+        width: 320px;
+        height: 320px;
+        right: -100px;
+        bottom: -140px;
+      }
+
+      .hero-content {
+        max-width: 700px;
+        margin: 5rem auto 0;
+        padding-top: 2rem;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.8rem 1.2rem;
+        background: #fff;
+        color: #021D2F;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      /* Контейнер основної частини */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      /* Картки з білим фоном, округленням і тінню */
+      .card {
+        background: white;
+        border-radius: 18px;
+        padding: 1.5rem;
+        margin-bottom: 1.6rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .links-list {
+        padding-left: 1.2rem;
+      }
+
+      .links-list a {
+        color: #021D2F;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="nav-logo">ЛОГО</div>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">Про мене</a>
+          <a href="#contacts" class="nav-link">Контакти</a>
+          <a href="zvit.html" class="nav-link">Звіт</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1>Привіт! Я Юра</h1>
+        <p>А це моя сторінка. Тут Ви зможете дізнатися більше про мене.</p>
+        <a href="#about" class="button">Дізнатися більше</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Секція з короткою інформацією про мене -->
+      <section class="card">
+        <h2>Коротко про мене</h2>
+        <p>
+          Я студент на спеціальності Облік і Оподаткування. Раніше я пробував верстку сайтів та створював свої кривенькі початкові сайти. Цей сайт є моєю невеличкою спробою створити щось більш сучасне та приємне для користувачів.
+        </p>
+      </section>
+
+      <!-- Секція з посиланнями на соціальні мережі -->
+      <section class="card">
+        <h2>Мої соціальні мережі</h2>
+        <ul class="links-list">
+          <li><a href="https://www.instagram.com/druzhba1337?igsh=b3FwYTczY3gzejVz" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@druzhba1337?_r=1&_t=ZS-97sHWQ5L4s8" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://t.me/@MisterOriginallity" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+      </section>
+
+      <!-- Секція з детальнішою інформацією про мене -->
+      <section class="card" id="about">
+        <h2>Про мене</h2>
+        <p>
+            Я давно цікавився веб-технологіями та дизайном. Мені подобається створювати красиві та функціональні інтерфейси, які приносять користь людям. Зараз я на жоскій мотивації вайбодю цей красивий сайтик. Я хочу створити сторінку з моїми хайлайтиками, сторіночку із прев'ю презентайції та сторінку з рефератом із завдання 2.1. Також можливо додам сторінку із повним звітом з практики.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
